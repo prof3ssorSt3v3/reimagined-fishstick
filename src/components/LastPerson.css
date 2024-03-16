@@ -1,0 +1,17 @@
+.lastPerson {
+  border: 1px solid hsla(300, 30%, 50%, 0.5);
+  color: hsla(300, 30%, 50%, 0.5);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 300px;
+  position: relative;
+}
+.lastPerson::before {
+  content: 'OLD';
+  position: absolute;
+  color: hsla(300, 30%, 50%, 1);
+  font-size: 0.8rem;
+  top: 0.5rem;
+  left: 0.5rem;
+}
