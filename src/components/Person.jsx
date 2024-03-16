@@ -7,7 +7,7 @@ const Person = ({ person, getNew }) => {
       <p>{person.email}</p>
       <button
         onClick={(ev) => {
-          let num = Math.floor(Math.random() * 10) + 1;
+          let num = Math.floor(Math.random() * 10); // 0 - 9
           getNew(num);
         }}
       >

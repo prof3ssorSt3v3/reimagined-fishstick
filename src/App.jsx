@@ -15,7 +15,7 @@ function App() {
     let url = `https://jsonplaceholder.typicode.com/users/${n}`;
     fetch(url)
       .then((resp) => {
-        if (!resp.ok) throw new Error('Not a person. Sucks to be you.');
+        if (!resp.ok) throw new Error('Not a valid person id. Such sad.');
         return resp.json();
       })
       .then((data) => {
@@ -24,6 +24,10 @@ function App() {
       })
       .catch((err) => {
         setMessage(err.message);
+        setPerson(null);
+        setTimeout(() => {
+          updateLast(1); //just load the initial person id 1
+        }, 1000);
       });
   }
 
